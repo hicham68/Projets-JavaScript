@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><h1> Préparer vous a affronter de puissants adversaires: </h1></p>
+
+<form id="frm1" action="">
+  Hero name: <input type="text" id="heroInputName" name="heroInputName"><br>
+  
+  <input type="button" onclick="gameLevel(document.getElementById('heroInputName').value)" value="Lancer le jeu">
+</form>
+<hr>
+<div id="resumerPartie">
+</div>
+
+<script>
+
+//   document.getElementById("frm1").submit();
+ /////////////////////////  JEU DE COMBAT MANGA //////
+let Hero = "Hicham"
+let enemyList = ["Dio Brando" , "Aizen sosuke", 'Madara Uchiwa'] 
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+  
+function gameLevel(nameHero){
+
+    console.log( document.getElementById("heroInputName").value) // affiche le texte écrit dans le champ hero 
+    document.getElementById("resumerPartie").innerHTML = " debut de la nouvelle partie"
+    
+    let niveau = 1 
+    for (let enemi of enemyList){ // le break marche pas avec le forEach
+        
+        console.log( nameHero + " Rencontre " + enemi )
+        var combatResultat= getRandomInt(10)
+        console.log(combatResultat)
+        if (0 <= combatResultat && combatResultat <= 5){
+            document.getElementById("resumerPartie").innerHTML = document.getElementById("resumerPartie").innerHTML + "<br>  <span style='color:blue'>" + nameHero + "</span> a gagné contre <span style='color:red'>" + enemi +"</span>"
+        }
+        else{ 
+            document.getElementById("resumerPartie").innerHTML = document.getElementById("resumerPartie").innerHTML + "<br><span style='color:blue'>" + nameHero + "</span> a perdu contre <span style='color:red'> "   + enemi + "</span>"
+            document.getElementById("resumerPartie").innerHTML = document.getElementById("resumerPartie").innerHTML + ("<br> <br> <hr> <h3>  Vous avez perdu  au  niveau " + niveau +" </h3>")
+            break
+        }
+        
+        console.log( "le niveau atteint est : "+ niveau)
+        if (niveau == 3){
+            document.getElementById("resumerPartie").innerHTML = document.getElementById("resumerPartie").innerHTML + "<br> <br> <hr> <h3> Bravo " + nameHero + " tu les à tous battu </h3>";
+        }
+        niveau+= 1
+
+    }
+    
+}
+
+
+
+</script>
+
+</body>
+</html>

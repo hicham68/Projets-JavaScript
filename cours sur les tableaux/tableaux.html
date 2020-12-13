@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableaux et JavaScript</title>
+</head>
+<body>
+    <div>
+        <h1>Modifions notre tableau avec javascript</h1>
+        <form  method="post" action="">
+            <fieldset>
+                <legend>Tableaux et JavaScript</legend> <!-- Titre du fieldset --> 
+                <p>
+                    <label for="option-select">Choisissez une option :</label>
+                    <select name="option-select" id="option-select">
+                        <option value="">--choisisser une option s'il vous plait--</option>
+                        <option value="push">push</option>
+                        <option value="split">find</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="texte"> nouvelle entrée :</label>
+                    <input type="text" name="texte" id="texte" >
+                </p>
+                    
+                    <input type="button" onclick="miseAjourTableau(document.getElementById('texte').value, tableauPrenom)" value="mettre à jour le tableau">
+
+                </legend>
+            </fieldset>
+        </form>
+    </div>
+    <h2> Affichage des éléments du tableau : </h2>
+    <div id="arrayList">
+        <!-- On affiche ici le contenu de la variable text javascript -->
+    </div>
+
+
+    <script src="js/arrayFonction.js">  </script>
+</body>
+</html>
