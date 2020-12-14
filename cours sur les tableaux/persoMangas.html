@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="PERSO MANGAS">
+        <Fieldset>
+            <legend>Perso Mangas</legend>
+            <p>
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" >
+        </p>
+        <p>
+            <label for="powers">Pouvoirs :</label>
+            <select name="powers" id="powers">
+                <option value="Feu">Feu</option>
+                <option value="Glace">Glace</option>
+                <option value="Electricité">Electricité</option>
+                <option value="Aucun" selected>Aucun</option>
+            </select>
+        </p>
+        <p>
+            <label for="mana">Energie :</label>
+            <input type="number" max="500" name="mana" id="mana">
+        </p>
+        <p>
+            <label for="damage">Dégats :</label>
+            <input type="number" max="500" name="damage" id="damage">
+        </p>
+        <p>
+            <label for="life">Vie :</label>
+            <input type="number" max="200" id="life" name="life">
+        </p>
+        <input type="button" onclick="createCharacter()" value="Créer" >
+        </Fieldset>
+    </form>
+    <div id="persocréer">
+
+    </div>
+    <script src="js/persoMangas.js"></script>
+</body>
+</html>
