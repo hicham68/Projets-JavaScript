@@ -22,9 +22,9 @@ function createCharacter(){
     document.getElementById("persocréer").innerHTML = personnage.information()
 }
 
-
-
-
+let tableau2 = ["richard", ['john', 450]]// tableau associatif
+let tableau = [   tableau2   , "hello"]
+console.log(tableau[0][1][1])
 
 
 

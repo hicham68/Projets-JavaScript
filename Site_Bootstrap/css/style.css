@@ -1,0 +1,8 @@
+.image-menu{
+    background-image: url("../image/lamborghini-huracan.jpg");
+    background-position: bottom -30px left -20px;
+}
+
+.h1, h1 {
+    color: white;
+}
