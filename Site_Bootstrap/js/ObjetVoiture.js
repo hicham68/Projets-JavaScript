@@ -12,7 +12,7 @@ class Voiture {
       return " model :  " + this.model + " marque : " + this.marque + " prix :  " + this.prix
     }
   }
-
+   
 let voiture1 = new Voiture("twingo",
                            "Renault", 
                            8014, 
